@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #faf8ff;
+  --card: #ffffff;
+  --border: #ece6f8;
+  --text: #1c1226;
+  --muted: #6f6584;
+}
+.dark {
+  --bg: #0d0916;
+  --card: #171022;
+  --border: #2a2040;
+  --text: #f3eefc;
+  --muted: #9d92b5;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body), sans-serif;
+}
+
+h1, h2, h3, .font-display { font-family: var(--font-display), sans-serif; }
+
+/* Signature: the Pulse gradient ring (purple → orange) */
+.pulse-ring {
+  background: conic-gradient(from 180deg, #7c3aed, #c026d3, #f97316, #7c3aed);
+  padding: 2.5px;
+  border-radius: 9999px;
+}
+
+/* Skeleton shimmer */
+.skeleton {
+  @apply rounded-xl bg-black/5 dark:bg-white/5;
+  background-image: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.08), transparent);
+  background-size: 400px 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 1.4s linear infinite;
+}
+
+/* 3D floating orbs for the auth hero */
+.orb {
+  border-radius: 9999px;
+  filter: blur(2px);
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.55), transparent 45%),
+    radial-gradient(circle at 70% 70%, rgba(249, 115, 22, 0.9), transparent 60%),
+    radial-gradient(circle at 50% 50%, #7c3aed, #4c1d95 80%);
+  box-shadow:
+    inset -18px -18px 40px rgba(0, 0, 0, 0.45),
+    0 30px 60px rgba(124, 58, 237, 0.45);
+}
+.perspective { perspective: 900px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: rgba(124, 58, 237, 0.35); border-radius: 8px; }
+
+/* Shared form input */
+.input {
+  height: 3rem; width: 100%; border-radius: 0.75rem;
+  border: 1px solid var(--border); background: var(--card);
+  padding: 0 1rem; font-size: 0.875rem; outline: none; color: var(--text);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.input:focus { border-color: #7c3aed; box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.25); }
