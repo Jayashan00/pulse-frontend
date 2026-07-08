@@ -1,5 +1,5 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Home, Search, PlusSquare, Bell, User, MessageCircle, Settings } from 'lucide-react';
@@ -20,13 +20,15 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
   const pathname = usePathname();
   const router = useRouter();
   const { user, token } = useAuth();
-  const hydrated = useHydrated();
+  const [mounted, setMounted] = useState(false);
 
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
-      if (hydrated && !token) router.replace('/login');
-    }, [hydrated, token, router]);
-    if (!hydrated || !token) return null;
+    if (mounted && !token) router.replace('/login');
+  }, [mounted, token, router]);
+
+  if (!mounted || !token) return null;
 
   const profileHref = user ? `/profile/${user.username}` : '/login';
 
