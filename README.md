@@ -81,4 +81,5 @@ Real-time messages via WebSockets · i18n wiring for the language selector · PW
 ![Responsiveness](screenshots/responsiveness.png)
 ![search Users](screenshots/searchUsers.png)
 ![post](screenshots/post.png)
+![SonarCloud-Frontend](sonarcloud-frontend.png)
 
