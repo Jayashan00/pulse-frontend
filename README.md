@@ -2,7 +2,7 @@
 
 The web client of **Pulse**, a TikTok-style social platform. Built with the Next.js App Router; every piece of data flows through the NestJS REST API (the browser never talks to Firebase or PostgreSQL directly).
 
-**Live site:** `http://<YOUR_ELASTIC_IP>` ← update after deployment
+**Live site:** `http://13.235.153.158` 
 
 ---
 
@@ -68,4 +68,17 @@ Production build: `npm run build && npm start`
 Real-time messages via WebSockets · i18n wiring for the language selector · PWA/push notifications · video feed with snap-scroll (true TikTok mode) · image optimization via Next `<Image>` + CDN
 
 ## Screenshots
-Add these after deployment (required by the assessment): Home, Profile, Messages, Dark Mode — place them in `/screenshots` and embed here.
+![Login](screenshots/logginScreen.png)
+![Profile](screenshots/profile.png)
+![Messages](screenshots/messaging.png)
+![Dark Mode](screenshots/darkMode.png)
+![Light Mode](screenshots/lightMode.png)
+![Like Comment](screenshots/AddLike&Comment.png)
+![After Adding Post](screenshots/AfterAddPost.png)
+![Create Account](screenshots/createAccountScreen.png)
+![Invalid Login](screenshots/InvalidLogin.png)
+![Notifications](screenshots/Notifications.png)
+![Responsiveness](screenshots/responsiveness.png)
+![search Users](screenshots/searchUsers.png)
+![post](screenshots/post.png)
+
