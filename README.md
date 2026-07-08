@@ -1,6 +1,5 @@
 # Pulse Web — Next.js Frontend
-## Architecture
-![Architecture](screenshots/architecture.png)
+
 
 The web client of **Pulse**, a TikTok-style social platform. Built with the Next.js App Router; every piece of data flows through the NestJS REST API (the browser never talks to Firebase or PostgreSQL directly).
 
@@ -68,6 +67,9 @@ Production build: `npm run build && npm start`
 
 ## Future Improvements
 Real-time messages via WebSockets · i18n wiring for the language selector · PWA/push notifications · video feed with snap-scroll (true TikTok mode) · image optimization via Next `<Image>` + CDN
+
+## Architecture
+![Architecture](screenshots/architecturenew.png)
 
 ## Screenshots
 ![Login](screenshots/logginScreen.png)
