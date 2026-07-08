@@ -49,16 +49,30 @@ export function PostCard({ post, onDeleted }: { post: Post; onDeleted?: (id: str
   };
 
   const share = async () => {
-    const url = `${window.location.origin}/feed?post=${post.id}`;
-    try {
-      if (navigator.share) await navigator.share({ title: 'Pulse', text: post.caption, url });
-      else {
-        await navigator.clipboard.writeText(url);
-        toast('Link copied to clipboard', 'success');
+      const url = `${window.location.origin}/feed?post=${post.id}`;
+      try {
+        if (navigator.share) {
+          await navigator.share({ title: 'Pulse', text: post.caption, url });
+        } else if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(url);
+          toast('Link copied to clipboard', 'success');
+        } else {
+          // Fallback for HTTP sites where the Clipboard API is blocked
+          const ta = document.createElement('textarea');
+          ta.value = url;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+          toast('Link copied to clipboard', 'success');
+        }
+        api.post(`/posts/${post.id}/share`).catch(() => {});
+      } catch {
+        toast('Could not share this post', 'error');
       }
-      api.post(`/posts/${post.id}/share`).catch(() => {});
-    } catch { /* user cancelled */ }
-  };
+    };
 
   const loadComments = async () => {
     setShowComments((v) => !v);
