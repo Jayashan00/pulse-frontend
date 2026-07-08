@@ -6,6 +6,7 @@ The web client of **Pulse**, a TikTok-style social platform. Built with the Next
 **Live site:** `http://13.235.153.158` 
 
 ---
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Jayashan00_pulse-frontend&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Jayashan00_pulse-frontend)
 
 ## Project Overview
 A fully responsive social app: auth, infinite-scroll feed, search, profiles with media upload, notifications, direct messages, and settings — themed in a professional **purple & orange** palette with light and dark modes.
@@ -32,7 +33,7 @@ Purple `#7C3AED` (primary) → Fuchsia → Orange `#F97316` (accent) gradient si
 ```bash
 git clone <this-repo> && cd pulse-frontend
 npm install
-cp .env .env      # set NEXT_PUBLIC_API_URL
+cp .env.example .env
 ```
 
 ## Run (local dev)
