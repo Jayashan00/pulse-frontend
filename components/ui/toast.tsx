@@ -6,6 +6,7 @@ import { CheckCircle2, AlertCircle, Info } from 'lucide-react';
 type Kind = 'success' | 'error' | 'info';
 interface Toast { id: number; kind: Kind; text: string }
 
+let toastCounter = 0;
 const ToastCtx = createContext<(text: string, kind?: Kind) => void>(() => {});
 export const useToast = () => useContext(ToastCtx);
 
@@ -19,7 +20,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
   const [toasts, setToasts] = useState<Toast[]>([]);
 
   const push = useCallback((text: string, kind: Kind = 'info') => {
-    const id = Date.now() + Math.random();
+    const id = ++toastCounter;
     setToasts((t) => [...t, { id, kind, text }]);
     setTimeout(() => setToasts((t) => t.filter((x) => x.id !== id)), 3200);
   }, []);
