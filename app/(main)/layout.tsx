@@ -20,11 +20,13 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
   const pathname = usePathname();
   const router = useRouter();
   const { user, token } = useAuth();
+  const hydrated = useHydrated();
+
 
   useEffect(() => {
-    if (!token) router.replace('/login');
-  }, [token, router]);
-  if (!token) return null;
+      if (hydrated && !token) router.replace('/login');
+    }, [hydrated, token, router]);
+    if (!hydrated || !token) return null;
 
   const profileHref = user ? `/profile/${user.username}` : '/login';
 

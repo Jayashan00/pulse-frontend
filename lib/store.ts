@@ -2,6 +2,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { User } from './types';
+import { useEffect, useState } from 'react';
 
 interface AuthState {
   user: User | null;
@@ -24,3 +25,13 @@ export const useAuth = create<AuthState>()(
     { name: 'pulse-auth' },
   ),
 );
+/** True once the persisted auth state has been restored from localStorage. */
+export function useHydrated() {
+  const [hydrated, setHydrated] = useState(false);
+  useEffect(() => {
+    const unsub = useAuth.persist.onFinishHydration(() => setHydrated(true));
+    setHydrated(useAuth.persist.hasHydrated());
+    return unsub;
+  }, []);
+  return hydrated;
+}
