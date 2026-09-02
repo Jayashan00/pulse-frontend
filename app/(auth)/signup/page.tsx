@@ -47,7 +47,7 @@ export default function SignupPage() {
   return (
     <div>
       <div className="mb-8 lg:hidden">
-        <span className="font-display text-3xl font-bold bg-pulse bg-clip-text text-transparent">Nexora</span>
+        <span className="font-display text-3xl font-bold brand-logo">Nexora</span>
       </div>
       <h1 className="font-display text-3xl font-bold">Create your account</h1>
       <p className="mt-1 text-sm text-[var(--muted)]">Join Nexora in under a minute.</p>
