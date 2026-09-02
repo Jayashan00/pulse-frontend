@@ -37,7 +37,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
       {/* Persistent side navigation (desktop) */}
       <aside className="sticky top-0 hidden h-screen w-64 shrink-0 flex-col border-r border-[var(--border)] px-4 py-6 md:flex xl:w-72">
         <Link href="/feed" className="mb-8 px-3 font-display text-3xl font-bold bg-pulse bg-clip-text text-transparent">
-          Pulse
+          Nexora
         </Link>
         <nav className="flex flex-1 flex-col gap-1">
           {nav.map(({ href, label, icon: Icon, gradient }) => {
@@ -92,7 +92,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
 
       {/* Mobile top bar */}
       <div className="fixed inset-x-0 top-0 z-40 flex h-14 items-center justify-between border-b border-[var(--border)] bg-[var(--bg)]/85 px-4 backdrop-blur md:hidden">
-        <Link href="/feed" className="font-display text-2xl font-bold bg-pulse bg-clip-text text-transparent">Pulse</Link>
+        <Link href="/feed" className="font-display text-2xl font-bold bg-pulse bg-clip-text text-transparent">Nexora</Link>
         <div className="flex items-center gap-1">
           <ThemeToggle />
           <Link href="/settings" aria-label="Settings" className="flex h-10 w-10 items-center justify-center rounded-xl text-[var(--muted)]">

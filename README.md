@@ -52,10 +52,10 @@ Production build: `npm run build && npm start`
 2. Clone to `~/apps/pulse-frontend`.
 3. Build & run:
    ```bash
-   docker build -t pulse-web --build-arg NEXT_PUBLIC_API_URL="http://<EIP>/api" .
+   docker build -t Nexora-web --build-arg NEXT_PUBLIC_API_URL="http://<EIP>/api" .
    docker run -d --name pulse-web --restart always -p 127.0.0.1:3000:3000 pulse-web
    ```
-4. Nginx proxies `/ → 127.0.0.1:3000` (config provided in `infrastructure/nginx/pulse.conf`).
+4. Nginx proxies `/ → 127.0.0.1:3000` (config provided in `infrastructure/nginx/Nexora.conf`).
 5. **Auto-deploy on push:** GitHub Actions workflow (secrets: `EC2_HOST`, `EC2_SSH_KEY`, `NEXT_PUBLIC_API_URL`) **or** the GitHub webhook listener on the server — both included.
 6. PM2 alternative (no Docker): `npm ci && npm run build && pm2 start ecosystem.config.js && pm2 save`.
 
@@ -87,4 +87,3 @@ Real-time messages via WebSockets · i18n wiring for the language selector · PW
 ![search Users](screenshots/searchUsers.png)
 ![post](screenshots/post.png)
 ![SonarCloud-Frontend](screenshots/sonarcloud-frontend.png)
-

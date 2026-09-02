@@ -30,7 +30,7 @@ const config: Config = {
         body: ['var(--font-body)'],
       },
       backgroundImage: {
-        pulse: 'linear-gradient(135deg, #7C3AED 0%, #C026D3 50%, #F97316 100%)',
+        Nexora: 'linear-gradient(135deg, #7C3AED 0%, #C026D3 50%, #F97316 100%)',
       },
       boxShadow: {
         glow: '0 0 40px rgba(124, 58, 237, 0.35)',
@@ -45,7 +45,7 @@ const config: Config = {
           '0%': { backgroundPosition: '-400px 0' },
           '100%': { backgroundPosition: '400px 0' },
         },
-        'pulse-ring': {
+        'Nexora-ring': {
           '0%': { transform: 'scale(1)', opacity: '0.6' },
           '100%': { transform: 'scale(1.8)', opacity: '0' },
         },
@@ -53,7 +53,7 @@ const config: Config = {
       animation: {
         float: 'float 7s ease-in-out infinite',
         shimmer: 'shimmer 1.4s linear infinite',
-        'pulse-ring': 'pulse-ring 1.6s ease-out infinite',
+        'Nexora-ring': 'Nexora-ring 1.6s ease-out infinite',
       },
     },
   },
