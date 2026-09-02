@@ -13,7 +13,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
           </div>
           <div>
             <h1 className="font-display text-5xl font-bold tracking-tight text-white">
-              Share your <span className="bg-pulse bg-clip-text text-transparent">moment</span>
+              Share your <span className="brand-logo">moment</span>
             </h1>
             <p className="mx-auto mt-4 max-w-sm text-white/60">
               Post, discover and connect. Nexora is where moments become movements.

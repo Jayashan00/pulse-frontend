@@ -25,6 +25,15 @@ body {
 
 h1, h2, h3, .font-display { font-family: var(--font-display), sans-serif; }
 
+/* Signature: the Nexora gradient logo/text */
+.brand-logo {
+  background: linear-gradient(135deg, #7c3aed 0%, #c026d3 50%, #f97316 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
 /* Signature: the Nexora gradient ring (purple → orange) */
 .pulse-ring {
   background: conic-gradient(from 180deg, #7c3aed, #c026d3, #f97316, #7c3aed);
