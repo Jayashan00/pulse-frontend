@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'pulse-web',
+      name: 'nexora-web',
       script: 'node_modules/next/dist/bin/next',
       args: 'start -p 3000',
       autorestart: true,

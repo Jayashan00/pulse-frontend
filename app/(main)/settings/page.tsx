@@ -83,7 +83,7 @@ export default function SettingsPage() {
         <LogOut className="h-5 w-5" /> Log out
       </Button>
 
-      <p className="mt-8 text-center text-xs text-[var(--muted)]">Pulse v1.0 · Built with Next.js & NestJS</p>
+      <p className="mt-8 text-center text-xs text-[var(--muted)]">Nexora v1.0 · Built with Next.js & NestJS</p>
     </div>
   );
 }

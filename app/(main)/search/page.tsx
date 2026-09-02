@@ -61,7 +61,7 @@ export default function SearchPage() {
         ) : !touched ? (
           <EmptyState
             icon={<UserSearch className="h-8 w-8" />}
-            title="Find people on Pulse"
+            title="Find people on Nexora"
             description="Search by username or display name to visit profiles."
           />
         ) : (

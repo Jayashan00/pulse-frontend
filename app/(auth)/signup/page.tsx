@@ -33,7 +33,7 @@ export default function SignupPage() {
     try {
       const { data } = await api.post('/auth/signup', form);
       setSession(data.user, data.idToken);
-      toast('Account created — welcome to Pulse! 🎉', 'success');
+      toast('Account created — welcome to Nexora! 🎉', 'success');
       router.replace('/feed');
     } catch (e) {
       setErrors({ general: apiError(e, 'Could not create your account') });
@@ -47,10 +47,10 @@ export default function SignupPage() {
   return (
     <div>
       <div className="mb-8 lg:hidden">
-        <span className="font-display text-3xl font-bold bg-pulse bg-clip-text text-transparent">Pulse</span>
+        <span className="font-display text-3xl font-bold bg-pulse bg-clip-text text-transparent">Nexora</span>
       </div>
       <h1 className="font-display text-3xl font-bold">Create your account</h1>
-      <p className="mt-1 text-sm text-[var(--muted)]">Join Pulse in under a minute.</p>
+      <p className="mt-1 text-sm text-[var(--muted)]">Join Nexora in under a minute.</p>
 
       {errors.general && (
         <div className="mt-5 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-500">

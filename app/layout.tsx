@@ -8,7 +8,7 @@ const display = Space_Grotesk({ subsets: ['latin'], variable: '--font-display' }
 const body = Inter({ subsets: ['latin'], variable: '--font-body' });
 
 export const metadata: Metadata = {
-  title: 'Pulse — Share your moment',
+  title: 'Nexora — Share your moment',
   description: 'A TikTok-style social platform built with Next.js and NestJS.',
 };
 

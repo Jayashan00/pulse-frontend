@@ -52,7 +52,7 @@ export function PostCard({ post, onDeleted }: { post: Post; onDeleted?: (id: str
       const url = `${window.location.origin}/feed?post=${post.id}`;
       try {
         if (navigator.share) {
-          await navigator.share({ title: 'Pulse', text: post.caption, url });
+          await navigator.share({ title: 'Nexora', text: post.caption, url });
         } else if (navigator.clipboard && window.isSecureContext) {
           await navigator.clipboard.writeText(url);
           toast('Link copied to clipboard', 'success');

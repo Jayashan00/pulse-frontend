@@ -1,7 +1,7 @@
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
     <main className="relative grid min-h-screen lg:grid-cols-2">
-      {/* Hero panel — the signature Pulse orb */}
+      {/* Hero panel — the signature Nexora orb */}
       <section className="relative hidden items-center justify-center overflow-hidden bg-surface-dark lg:flex">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(124,58,237,0.35),transparent_55%),radial-gradient(ellipse_at_bottom_right,rgba(249,115,22,0.25),transparent_55%)]" />
         <div className="perspective relative z-10 flex flex-col items-center gap-10 px-12 text-center">
@@ -16,7 +16,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
               Share your <span className="bg-pulse bg-clip-text text-transparent">moment</span>
             </h1>
             <p className="mx-auto mt-4 max-w-sm text-white/60">
-              Post, discover and connect. Pulse is where moments become movements.
+              Post, discover and connect. Nexora is where moments become movements.
             </p>
           </div>
         </div>

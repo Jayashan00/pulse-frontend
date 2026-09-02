@@ -1,7 +1,7 @@
 {
-  "name": "pulse-frontend",
+  "name": "nexora-frontend",
   "version": "1.0.0",
-  "description": "Pulse - TikTok-style social platform (Next.js App Router)",
+  "description": "Nexora - TikTok-style social platform (Next.js App Router)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

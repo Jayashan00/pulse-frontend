@@ -25,7 +25,7 @@ body {
 
 h1, h2, h3, .font-display { font-family: var(--font-display), sans-serif; }
 
-/* Signature: the Pulse gradient ring (purple → orange) */
+/* Signature: the Nexora gradient ring (purple → orange) */
 .pulse-ring {
   background: conic-gradient(from 180deg, #7c3aed, #c026d3, #f97316, #7c3aed);
   padding: 2.5px;

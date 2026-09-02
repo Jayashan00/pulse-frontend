@@ -86,7 +86,7 @@ export default function NotificationsPage() {
               <button onClick={() => !n.read && markOne(n.id)} className="w-full text-left">
                 <Card className={cn('flex items-center gap-3 p-4 transition-colors', !n.read && 'border-primary/40 bg-primary/5')}>
                   <div className="relative">
-                    <Avatar src={n.actor?.avatarUrl} name={n.actor?.displayName || n.actor?.username || 'Pulse'} />
+                    <Avatar src={n.actor?.avatarUrl} name={n.actor?.displayName || n.actor?.username || 'Nexora'} />
                     <span className="absolute -bottom-1 -right-1 rounded-full bg-[var(--card)] p-1">{typeIcon[n.type]}</span>
                   </div>
                   <div className="min-w-0 flex-1">

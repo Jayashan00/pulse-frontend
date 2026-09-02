@@ -42,7 +42,7 @@ export default function LoginPage() {
   return (
     <div>
       <div className="mb-8 lg:hidden">
-        <span className="font-display text-3xl font-bold bg-pulse bg-clip-text text-transparent">Pulse</span>
+        <span className="font-display text-3xl font-bold bg-pulse bg-clip-text text-transparent">Nexora</span>
       </div>
       <h1 className="font-display text-3xl font-bold">Log in</h1>
       <p className="mt-1 text-sm text-[var(--muted)]">Pick up where you left off.</p>
@@ -82,7 +82,7 @@ export default function LoginPage() {
       </div>
 
       <p className="mt-6 text-center text-sm text-[var(--muted)]">
-        New to Pulse?{' '}
+        New to Nexora?{' '}
         <Link href="/signup" className="font-medium text-accent hover:underline">
           Create an account
         </Link>
